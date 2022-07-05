@@ -31,7 +31,7 @@ def compute(img):
 	return model.config.id2label[predicted_class_idx]
 
 #######################################################
-if __name__ == '__main__':
+def st_ui():
 
 	st.title("Image classification")
 
@@ -40,9 +40,14 @@ if __name__ == '__main__':
 
 	if image_file is not None:
 		img, file_details = __get_image__(image_file)
-		# st.write(file_details)
+
 		st.image(img,caption='uploaded image')
 
 		st.subheader("IPrediction")
 		prediction = compute(img)
 		st.text(prediction)
+
+#######################################################
+if __name__ == '__main__':
+
+	st_ui()
