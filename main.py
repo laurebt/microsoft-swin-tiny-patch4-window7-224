@@ -35,7 +35,7 @@ def st_ui():
 
 	st.title("Image classification")
 
-	st.subheader("Image")
+	st.subheader("Image (png or jpg)")
 	image_file = st.file_uploader(label="Upload an image")
 
 	if image_file is not None:
