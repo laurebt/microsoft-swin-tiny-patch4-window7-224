@@ -1,5 +1,5 @@
 torchvision
-torch
+pytorch
 torchaudio
 transformers
 PIL
