@@ -1,5 +1,5 @@
-torch
 torchvision
+torch
 torchaudio
 transformers
 PIL
