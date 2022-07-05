@@ -1,5 +1,6 @@
 torch
-torch-scatter
+torchvision
+torchaudio
 transformers
 PIL
 requests
