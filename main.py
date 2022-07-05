@@ -4,16 +4,13 @@ from transformers import AutoFeatureExtractor, SwinForImageClassification
 from PIL import Image
 import requests
 import streamlit as st
+import numpy as np
 
 #######################################################
 def __get_image__(image_file):
 
 	file_details = {"filename":image_file.name, "filetype":image_file.type, "filesize":image_file.size}
 	img = Image.open(image_file)
-	
-	# Remove alpha channel, if it has one
-   	if img.shape[-1] == 4:
-		img = img.convert('RGB')
 
 	return img, file_details
 
@@ -21,6 +18,11 @@ def __get_image__(image_file):
 #######################################################
 # Image classification
 def compute(img):
+
+	# Remove alpha channel, if it has one
+	img = np.array(img)
+	if img.shape[-1] == 4:
+		img = img[..., :3]
 
 	feature_extractor = AutoFeatureExtractor.from_pretrained("microsoft/swin-tiny-patch4-window7-224")
 	model = SwinForImageClassification.from_pretrained("microsoft/swin-tiny-patch4-window7-224")
