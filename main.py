@@ -43,7 +43,7 @@ def st_ui():
 
 		st.image(img,caption='uploaded image')
 
-		st.subheader("IPrediction")
+		st.subheader("Prediction")
 		prediction = compute(img)
 		st.text(prediction)
 
