@@ -36,7 +36,7 @@ def st_ui():
 	st.title("Image classification")
 
 	st.subheader("Image")
-	image_file = st.file_uploader(label="Upload an image", type=['jpg', 'jpeg'])
+	image_file = st.file_uploader(label="Upload an image")
 
 	if image_file is not None:
 		img, file_details = __get_image__(image_file)
