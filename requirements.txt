@@ -1,4 +1,5 @@
-pytorch
+torch
+torch-scatter
 transformers
 PIL
 requests
