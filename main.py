@@ -13,7 +13,7 @@ def __get_image__(image_file):
 	
 	# Remove alpha channel, if it has one
    	if img.shape[-1] == 4:
-        	img = img.convert('RGB')
+		img = img.convert('RGB')
 
 	return img, file_details
 
