@@ -1,7 +1,7 @@
-torchvision
-pytorch
-torchaudio
-transformers
-PIL
-requests
-streamlit
+# torchvision
+# pytorch
+# torchaudio
+# transformers
+# PIL
+# requests
+# streamlit
