@@ -10,6 +10,10 @@ def __get_image__(image_file):
 
 	file_details = {"filename":image_file.name, "filetype":image_file.type, "filesize":image_file.size}
 	img = Image.open(image_file)
+	
+	# Remove alpha channel, if it has one
+   	if img.shape[-1] == 4:
+        	img = img.convert('RGB')
 
 	return img, file_details
 
